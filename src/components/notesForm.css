@@ -1,0 +1,14 @@
+.noteform {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 15px;
+}
+.noteform h3 {
+  color: #171717;
+}
+.noteform .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}

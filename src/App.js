@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import * as firebase from 'firebase';
+
+import Header from './components/Header'
+
+const useContador = (inicial) => {
+  const [contador, setContador] = useState(inicial)
+  const incrementar = () => { setContador(contador + 1) }
+  return { contador, incrementar }
+}
 
 function App() {
+  const { contador, incrementar } = useContador(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <p> { contador } </p>
+      <button onClick={incrementar}> Incrementar </button>
     </div>
   );
 }

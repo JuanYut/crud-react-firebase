@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import * as firebase from 'firebase';
+import React from 'react';
 
 // * My components
 import Header from './components/Header'
 import NotesForm from './components/NotesForm'
+import Notes from './components/Notes'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <main>
         <NotesForm />
+        <Notes />
       </main>
     </div>
   );
